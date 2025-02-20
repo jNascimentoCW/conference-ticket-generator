@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Sheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-img">
+          <img src="/assets/images/logo-mark.svg" alt="" />
+          <p>Coding Conf</p>
+        </div>
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+      </div>
+      <div class="form">
+        <form action="">
+          <div>
+            <label for="">Upload Avatar</label>
+            <label for="files">
+              <img src="/assets/images/icon-upload.svg" alt="" />
+              Drag and drop or click to upload
+            </label>
+            <p>ⓘ Upload your photo (JPG or PNG, max size: 500KB).</p>
+          </div>
+          <div>
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="fname" />
+          </div>
+          <div>
+            <label for="femail">Email Address</label>
+            <input type="text" placeholder="example@email.com" />
+          </div>
+          <div>
+            <label for="">Github Username</label>
+            <input type="text" placeholder="@yourusername" />
+          </div>
+          <div>
+            <input class="btn" type="submit" value="Generate My Ticket" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
