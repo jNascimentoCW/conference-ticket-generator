@@ -3,6 +3,7 @@
   box-sizing: border-box;
 }
 
+/* Landing page background */
 body {
   background-image: url("/assets/images/pattern-lines.svg"),
     url("/assets/images/pattern-circle.svg"),
@@ -50,7 +51,7 @@ h1 {
   top: 50%;
   transform: translate(-50%, -50%);
   word-spacing: 5px;
-  width: 50%;
+  min-width: 50%;
 }
 
 @media (max-width: 600px) {
@@ -136,10 +137,28 @@ form p {
   color: rgba(255, 255, 255, 0.4);
 }
 
-.form form div input.btn {
+button {
   background-color: rgba(246, 116, 100, 255);
   color: rgba(28, 5, 27, 255);
+  border: 0.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 1);
+  padding: 0.5rem;
+  width: 60%;
   font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  button {
+    width: 80%;
+  }
 }
 
 label {
@@ -177,4 +196,60 @@ label:nth-child(2) img {
   border-radius: 10px;
   padding: 0.51rem;
   margin-bottom: 1rem;
+}
+
+/* Ticket */
+.ticket {
+  background-image: url("/assets/images/pattern-ticket.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  height: 20rem;
+  width: 45rem;
+}
+
+.ticket img {
+  /* z-index: -1; */
+}
+
+.ticket-elements {
+  /* position: ; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.ticket-elements:nth-child(1) img {
+  margin-right: 1rem;
+  width: 2rem;
+}
+
+.ticket-elements:nth-child(2) img {
+  border-radius: 10px;
+  margin-right: 1rem;
+  width: 4rem;
+}
+
+.ticket-id {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 2rem;
+  right: 2rem;
+  top: 9rem;
+  transform: rotate(90deg);
+}
+
+.ticket-content {
+  line-height: 2rem;
+}
+
+.github-img {
+  width: 1rem;
 }
