@@ -27,6 +27,10 @@ h1 {
   }
 }
 
+.page-title {
+  font-size: 1.5rem;
+}
+
 .top-img,
 .bottom-img {
   position: absolute;
@@ -42,6 +46,10 @@ h1 {
   left: 0;
 }
 
+.header-title {
+  font-size: 2rem;
+}
+
 .container {
   color: white;
   font-family: "Inconsolata", serif;
@@ -52,6 +60,10 @@ h1 {
   transform: translate(-50%, -50%);
   word-spacing: 5px;
   min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 600px) {
@@ -70,8 +82,12 @@ h1 {
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   padding-bottom: 2rem;
 }
 
@@ -79,6 +95,10 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header-img p {
+  /* font-size: 2rem; */
 }
 
 .header-img img {
@@ -89,17 +109,22 @@ h1 {
 
 form p {
   font-size: 0.7rem;
+  width: 100%;
+}
+
+.form {
   width: 60%;
 }
 
 @media (max-width: 600px) {
-  form p {
+  .form {
     width: 100%;
+    /* background-color: white; */
   }
 }
 
 @media (min-width: 601px) and (max-width: 1200px) {
-  form p {
+  .form {
     width: 80%;
   }
 }
@@ -118,7 +143,7 @@ form p {
   border-radius: 10px;
   color: rgba(255, 255, 255, 1);
   padding: 0.5rem;
-  width: 60%;
+  width: 100%;
 }
 
 @media (max-width: 600px) {
@@ -127,11 +152,11 @@ form p {
   }
 }
 
-@media (min-width: 601px) and (max-width: 1200px) {
-  .form form div input {
+/* @media (min-width: 601px) and (max-width: 1200px) {
+  .form {
     width: 80%;
   }
-}
+} */
 
 .form form div input::placeholder {
   color: rgba(255, 255, 255, 0.4);
@@ -144,11 +169,11 @@ button {
   border-radius: 10px;
   color: rgba(255, 255, 255, 1);
   padding: 0.5rem;
-  width: 60%;
+  width: 100%;
   font-weight: 700;
   cursor: pointer;
 }
-
+/* 
 @media (max-width: 600px) {
   button {
     width: 100%;
@@ -159,14 +184,14 @@ button {
   button {
     width: 80%;
   }
-}
+} */
 
 label {
   margin-bottom: 0.5rem;
-  width: 60%;
+  width: 100%;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   label {
     width: 100%;
   }
@@ -176,7 +201,7 @@ label {
   label {
     width: 80%;
   }
-}
+} */
 
 label:nth-child(2) {
   background-color: rgba(90, 34, 139, 0.4);
@@ -199,6 +224,39 @@ label:nth-child(2) img {
 }
 
 /* Ticket */
+h2 {
+  padding: 2rem 0;
+  font-size: 2.8rem;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  h2 {
+    font-size: 1.9rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  h3 {
+    font-size: 1.9rem;
+  }
+}
+
 .ticket {
   background-image: url("/assets/images/pattern-ticket.svg");
   background-repeat: no-repeat;
@@ -214,28 +272,63 @@ label:nth-child(2) img {
   width: 45rem;
 }
 
-.ticket img {
-  /* z-index: -1; */
+@media (max-width: 600px) {
+  .ticket {
+    width: 45rem;
+    height: 14rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  .ticket {
+    width: 40rem;
+  }
+}
+
+.message {
+  font-size: 1.4rem;
 }
 
 .ticket-elements {
-  /* position: ; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0 4rem;
 }
 
+@media (max-width: 600px) {
+  .ticket-elements {
+    padding: 0 9rem;
+  }
+}
+
+/* @media (min-width: 601px) and (max-width: 1200px) {
+  .ticket-elements {
+  }
+} */
+
 .ticket-elements:nth-child(1) img {
   margin-right: 1rem;
   width: 2rem;
 }
 
-.ticket-elements:nth-child(2) img {
+.avatar-img img {
   border-radius: 10px;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   width: 4rem;
 }
+
+@media (max-width: 600px) {
+  .avatar-img img {
+    width: 3.5rem;
+  }
+}
+
+/* @media (min-width: 601px) and (max-width: 1200px) {
+.avatar-img img {
+  border-radius: 10px;
+  margin-right: 1rem; 
+} */
 
 .ticket-id {
   position: absolute;
@@ -246,10 +339,40 @@ label:nth-child(2) img {
   transform: rotate(90deg);
 }
 
+@media (max-width: 600px) {
+  .ticket-id {
+    right: 7rem;
+    top: 6rem;
+  }
+}
+
+/* @media (min-width: 601px) and (max-width: 1200px) {
+  .ticket-id {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 2rem;
+    right: 2rem;
+    top: 9rem;
+    transform: rotate(90deg);
+  }
+}*/
+
 .ticket-content {
   line-height: 2rem;
 }
 
+.ticket-content:nth-child(2) {
+  margin-left: 1rem;
+}
+
 .github-img {
-  width: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-img img {
+  margin-right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
 }
